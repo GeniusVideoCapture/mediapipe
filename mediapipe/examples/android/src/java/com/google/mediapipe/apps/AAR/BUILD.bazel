@@ -1,0 +1,10 @@
+load("//mediapipe/java/com/google/mediapipe:mediapipe_aar.bzl", "mediapipe_aar")
+
+package(default_visibility = ["//visibility:public"])
+
+# run using:
+# bazel build -c opt mediapipe/examples/android/src/java/com/google/mediapipe/apps/facedetectiongpu:binary_graph
+mediapipe_aar(
+    name = "mp_edge_detection_aar",
+    calculators = ["//mediapipe/graphs/edge_detection:mobile_calculators"],
+)
